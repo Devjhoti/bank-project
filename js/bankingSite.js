@@ -13,6 +13,8 @@ const depositBtn = document.getElementById('deposit-btn');
 const withdrawBtn = document.getElementById('withdraw-btn');
 const darkMode=document.getElementById('dark-mode');
 const lightMode=document.getElementById('light-mode');
+const logOut=document.getElementById('log-out');
+
 
 var totalDeposit = 0;
 var totalWithdraw = 0;
@@ -145,4 +147,8 @@ lightMode.addEventListener('click',function(){
     lightMode.style.display='none';
     darkMode.style.display='block';
     heading.style.color='black';
+})
+
+logOut.addEventListener('click',function(){
+    window.location.href='./index.html';
 })

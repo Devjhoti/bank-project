@@ -17,6 +17,9 @@ submitBtn.addEventListener('click', function () {
         window.location.href='./banking.html'
     }
     else{
+        
         alertText.style.display='block';
+        emailField.value='';
+        passwordField.value='';
     }
 })

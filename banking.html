@@ -25,7 +25,7 @@
         /* .lni{
             height: 50px; !important
         } */
-        #dark-mode{
+        #dark-mode, #light-mode{
             border-radius: 10%;
         }
     </style>
@@ -34,11 +34,11 @@
 <body>
     <header>
 
-        <div style="height: auto;" class="border-2 flex justify-between">
-            <div class="text-4xl pl-80 md:text-white"> Make MONEY safe!</div>
+        <div style="height: auto;" class="border-0 flex justify-between">
+            <div class="text-4xl pl-80 md:text-white"> </div>
             <div>
-                <button id="dark-mode" class="border-2 text-white bg-black p-4"><i class="lni lni-night"></i>dark mode</button>
-                <button id="light-mode" class="border-2 text-white bg-black p-4 " style="display: none;"><i class="lni lni-bulb"></i>Light mode</button>
+                <button id="dark-mode" class="border-2 text-white bg-black p-4"><i class="lni lni-night"></i></button>
+                <button id="light-mode" class="border-2 text-white bg-black p-4 " style="display: none;"><i class="lni lni-bulb"></i></button>
             </div>
         </div>
         <h1 id="heading" class=" text-5xl text-center mt-16 ">Welcome to this <span class="font-semibold text-purple-600">Banking
@@ -92,6 +92,11 @@
         </section>
     </main>
 
+    <footer class="mt-44">
+        <div class="flex justify-center align-bottom">
+            <button id="log-out" class="border-2 bg-red-900 text-white p-4 rounded-3xl"><em><strong>Log Out <i class="lni lni-exit"></i> </strong> </em></button>
+        </div>
+    </footer>
     <script src="./js/bankingSite.js"></script>
 </body>
 
