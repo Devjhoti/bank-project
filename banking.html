@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking page</title>
+
+    <!-- tailwind styles -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+
+
+    <!-- custom styles -->
+    <style>
+        /* body{
+            background-color: rgba(0, 0, 0, 0.877);
+        } */
+        /* i{
+            height: 20px;
+        } */
+        /* .lni{
+            height: 50px; !important
+        } */
+        #dark-mode{
+            border-radius: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div style="height: auto;" class="border-2 flex justify-between">
+            <div class="text-4xl pl-80 md:text-white"> Make MONEY safe!</div>
+            <div>
+                <button id="dark-mode" class="border-2 text-white bg-black p-4"><i class="lni lni-night"></i>dark mode</button>
+                <button id="light-mode" class="border-2 text-white bg-black p-4 " style="display: none;"><i class="lni lni-bulb"></i>Light mode</button>
+            </div>
+        </div>
+        <h1 id="heading" class=" text-5xl text-center mt-16 ">Welcome to this <span class="font-semibold text-purple-600">Banking
+                system</span></h1>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-- balance and transaction -->
+        <section class="mt-8">
+            <div class="grid grid-cols-3 gap-4  text-white">
+                <div class="bg-blue-400 p-8 rounded">
+                    <h3 class="text-2xl">Deposit</h3>
+                    <h4 id="deposit-display" class="text-4xl">$00</h4>
+                </div>
+                <div class="bg-red-400 p-8 rounded">
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <h4 id="withdraw-display" class="text-4xl">$00</h4>
+                </div>
+                <div class="bg-green-400 p-8 rounded">
+                    <h3 class="text-2xl">Balance</h3>
+                    <h4 id="balance-display" class="text-4xl">$1240</h4>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- deposit and withdraw -->
+        <section class="mt-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl mb-1.5">Please Deposit</h3>
+                    <div class="" action="">
+                        <input class="border-1 border-gray-400 rounded block w-3/4 mb-4 px-2" type="text"
+                            placeholder="Enter Your Deposit Amount" id="deposit-input">
+
+                        <button class="bg-yellow-600 px-4 py-2 rounded text-white font-medium"
+                            id="deposit-btn">Deposit</button>
+                    </div>
+                </div>
+                <div class="bg-purple-100 p-8 rounded">
+                    <h3 class="text-2xl mb-1.5">Please Withdraw</h3>
+                    <div class="" action="">
+                        <input class="border-1 border-gray-400 rounded block w-3/4 mb-4 px-2" type="text"
+                            placeholder="Enter Your Withdraw Amount" id="withdraw-input">
+                        <p id="withdraw-alert" style="display: none;" class="text-red-400 font-semibold">withdraw limit
+                            reached = $0</p>
+                        <button class="bg-yellow-600 px-4 py-2 rounded text-white font-medium"
+                            id="withdraw-btn">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/bankingSite.js"></script>
+</body>
+
+</html>
